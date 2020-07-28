@@ -3,14 +3,14 @@ const { app, BrowserWindow } = require('electron')
 function createWindow() {
     // 创建浏览器窗口
     let win = new BrowserWindow({
-        width: 800,
+        width: 1200,
         height: 600,
         webPreferences: {
-            nodeIntegration: false,
+            nodeIntegration: true,
             preload: __dirname + '/preload.js',
             javascript: true,
-            plugins: true,
-            webSecurity: false
+            plugins: true
+            // webSecurity: false
             // nodeIntegration: false,
             // allowDisplayingInsecureContent: true,
             // allowRunningInsecureContent: true
@@ -18,7 +18,7 @@ function createWindow() {
     })
 
     // 加载index.html文件
-    win.loadURL('http://localhost:3000/')
+    win.loadURL('http://localhost:3000')
     win.webContents.openDevTools()
 }
 

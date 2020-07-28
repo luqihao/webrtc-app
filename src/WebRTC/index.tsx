@@ -1,9 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react'
 import { desktopCapturer } from 'electron'
 import { Button } from 'antd'
-import styles from './index.scss'
-
-// console.log(desktopCapturer)
+import styles from './index.module.scss'
 
 const VIDEO_WIDTH = 500
 const VIDEO_HEIGHT = 400
@@ -19,13 +17,13 @@ const WebRTC: React.FC = () => {
     const [recorderVisible, setRecorderVisible] = useState<boolean>(false)
 
     useEffect(() => {
-        if (monitor.current && monitorVideo.current) {
+        if (monitorVisible && monitor.current && monitorVideo.current) {
             initMonitor()
         }
     }, [monitorVisible])
 
     useEffect(() => {
-        if (recorder.current && recorderVideo.current) {
+        if (recorderVisible && recorder.current && recorderVideo.current) {
             initRecorder()
         }
     }, [recorderVisible])

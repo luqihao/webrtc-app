@@ -1,23 +1,23 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
+node_modules
+npm-debug*
 /build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+/dist
+/dist/main
+/dist/renderer
+/dist/worker
+/coverage
+/index.html
+/.cache-loader
+/.swp
+/.DS_Store
+**/.DS_Store
+/package
+/package-lock.json
+/yarn-error.log
+/*.db
+/ossutil_output
+/.ossutil_checkpoint
+/unasar
+/changelog/qa1
+/changelog/alpha
+/.idea
