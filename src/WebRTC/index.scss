@@ -1,0 +1,23 @@
+.mediaWrapper {
+    display: flex;
+
+    canvas {
+        box-sizing: border-box;
+        flex: 1;
+    }
+}
+
+.video {
+    left: -999999px;
+    position: absolute;
+    top: -9999999px;
+}
+
+.btnWrapper {
+    display: flex;
+
+    > div {
+        flex: 1;
+        text-align: center;
+    }
+}
